@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сайт портфолио</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="particles.min.js"></script>
+    <script src="script.js" defer=""></script>
+    <style>
+
+        body {
+            background-image: url("img/627883_e3f4Gf8_space.jpg");
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: repeat;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .header {
+            color: white;
+            background-color: #000000;
+            padding: 20px 0;
+            border-radius: 100px;
+        }
+
+        .header-title {
+            margin: 0;
+            padding: 0 0 0 25px;
+            z-index: 2;
+        }
+
+        .container {
+            width: 65%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+            position: relative;
+        }
+
+        .main {
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .avatar-container {
+            overflow: hidden;
+            border-radius: 80%;
+        }
+
+        .avatar {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .main-text {
+            color: white;
+            margin-left: 20px;
+            font-size: 15px;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 10px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+
+        .bubbly-button {
+            font-family: "Arial";
+            display: inline-block;
+            font-size: 1em;
+            padding: 1em 2em;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: rgb(37 255 0);
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+            box-shadow: 0 2px 25px rgba(28, 12, 57, 0.5);
+            z-index: 2;
+        }
+
+        .bubbly-button:focus {
+            outline: 0;
+        }
+
+        .bubbly-button:before, .bubbly-button:after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+        }
+
+        .bubbly-button:before {
+            display: none;
+            top: -75%;
+            background-image: radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, transparent 20%, rgb(37 255 0) 20%, transparent 30%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, transparent 10%, rgb(37 255 0) 15%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        }
+
+        .bubbly-button:after {
+            display: none;
+            bottom: -75%;
+            background-image: radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, transparent 10%, rgb(37 255 0) 15%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%), radial-gradient(circle, rgb(37 255 0) 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        }
+
+        .bubbly-button:active {
+            transform: scale(0.9);
+            background-color: rgb(37 255 0);
+            box-shadow: 0 2px 25px rgb(37 255 0);
+        }
+
+        .bubbly-button.animate:before {
+            display: block;
+            animation: topBubbles ease-in-out 0.75s forwards;
+        }
+
+        .bubbly-button.animate:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+        }
+
+        @keyframes topBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+            }
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+            }
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        @keyframes bottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+            }
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+            }
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        .portfolio-menu {
+            display: none;
+            background-color: #000000;
+            padding: 10px;
+            color: rgb(37 255 0);
+            opacity: 0.8;
+            border-radius: 10px;
+            position: absolute;
+            bottom: -150px;
+            width: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .portfolio-menu a {
+            color: rgb(37 255 0); /* Цвет ссылок в меню */
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .portfolio-menu a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении на ссылку */
+            z-index: 2;
+        }
+
+        .footer {
+            
+            color: white;
+            background-color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            border-radius: 100px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">ВИЗИТКА</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="avatar-container">
+                <img src="img/ava.jpg" alt="Аватар" class="avatar">
+            </div>
+            <div class="main-text">
+                <h2>Небольшая сайт-визитка, в котором расскажу о себе</h2>
+                <p>Я учусь в МТУСИ, лучшем, невероятном, бесконечно вечном вузе, с лучшей столовкой</p>
+            </div>
+            <button class="bubbly-button" onclick="togglePortfolio()">Не жми на кнопку</button>
+            <div class="portfolio-menu" id="portfolioMenu">
+                <p>Ну раз ты так хочешь, держи мои контакты:</p>
+                <ul>
+                    <li><a href="https://github.com/goldendanoff" target="_blank">My Github</a></li>
+                    <li><a href="https://t.me/goldendanoff" target="_blank">My Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+<div id="particles-js">
+    <footer class="footer">
+        <p>Это погреб тут я храню огурцы</p>
+    </footer>
+</div>
+    <script>
+
+        function togglePortfolio() {
+            var portfolioMenu = document.getElementById("portfolioMenu");
+            if (portfolioMenu.style.display === "none" || portfolioMenu.style.display === "") {
+                portfolioMenu.style.display = "block";
+            } else {
+                portfolioMenu.style.display = "none";
+            }
+        }
+
+        var animateButton = function(e) {
+            e.preventDefault;
+
+            e.target.classList.remove('animate');
+            
+            e.target.classList.add('animate');
+            setTimeout(function(){
+                e.target.classList.remove('animate');
+            },700);
+        };
+
+        var bubblyButton = document.querySelector(".bubbly-button");
+        bubblyButton.addEventListener('click', animateButton, false);
+
+
+    
+    </script>
+</body>
+</html>
