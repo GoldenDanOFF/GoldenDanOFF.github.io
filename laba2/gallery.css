@@ -1,0 +1,37 @@
+
+.container1 { 
+    margin: 0 auto; 
+    width: 100%; 
+    z-index: 2;
+} 
+  
+.main_view { 
+    margin: 0 auto; 
+    margin-top: 1%;
+    width: 90%; 
+    height: 40rem;
+    z-index: 2; 
+} 
+  
+.main_view img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: fill;
+    z-index: 2;
+} 
+  
+.side_view { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    z-index: 2;
+} 
+  
+.side_view img { 
+    width: 9rem; 
+    height: 7rem; 
+    object-fit: cover; 
+    cursor: pointer; 
+    margin: 0.5rem; 
+    z-index: 2;
+}

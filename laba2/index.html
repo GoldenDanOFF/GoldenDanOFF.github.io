@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сайт портфолио</title>
+    <link rel="stylesheet" type="text/css" href="../normalizesnow.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../glowbutton.css">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <script src="../particlessnow.js"></script>
+    <script src="../scriptsnow.js" defer=""></script>
+    <script src="../main.js" defer=""></script>
+    <script src="gallery.js" defer=""></script>
+</head>
+<body>
+
+<style>
+
+    .container1 { 
+        margin: 0 auto; 
+        width: 100%; 
+        z-index: 2;
+    } 
+      
+    .main_view { 
+        margin: 0 auto; 
+        margin-top: 1%;
+        width: 90%; 
+        height: 40rem;
+        z-index: 2; 
+    } 
+      
+    .main_view img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: fill;
+        z-index: 2;
+    } 
+      
+    .side_view { 
+        display: flex; 
+        justify-content: center; 
+        flex-wrap: wrap; 
+        z-index: 2;
+    } 
+      
+    .side_view img { 
+        width: 9rem; 
+        height: 7rem; 
+        object-fit: cover; 
+        cursor: pointer; 
+        margin: 0.5rem; 
+        z-index: 2;
+    }</style>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Результаты лаба 2</h1>
+        </div>
+    </header>
+      <div class="container1"> 
+        <div class="main_view"> 
+            <img src="img/results1.png" id="main" alt="IMAGE"> 
+        </div> 
+  
+        <div class="side_view"> 
+            <img src="img/results1.png" onclick="change(this.src)"> 
+            <img src="img/results2.png" onclick="change(this.src)"> 
+            <img src="img/results3.png" onclick="change(this.src)"> 
+        </div> 
+    </div> 
+
+                </ul>
+            </div>
+        </div>
+
+<div id="particles-js">
+    <footer class="footer">
+        <p>Это погреб тут я храню огурцы</p>
+    </footer>
+</div>
+
+</body>
+</html>
